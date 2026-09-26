@@ -207,7 +207,7 @@ with col_right:
 
         try:
             with st.spinner("Contacting model..."):
-                response = requests.post(f"{api_url}/predict", json=payload, timeout=15)
+                response = requests.post(f"{api_url}/predict", json=payload, timeout=60)
 
             if response.status_code == 200:
                 score = response.json()["predicted_mental_health_score"]
